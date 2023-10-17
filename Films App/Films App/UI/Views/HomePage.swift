@@ -13,31 +13,22 @@ class HomePage: UIViewController {
     
     var filmsList = [Films]()
     
+    var homePageVM = HomePageViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setFilms()
         setUI()
         setCollectionUI()
+        
+        _ = homePageVM.filmsList.subscribe(onNext: { list in
+            self.filmsList = list
+            self.filmsCollectionView.reloadData()
+        })
     }
     
     private func setUI() {
         filmsCollectionView.dataSource = self
         filmsCollectionView.delegate = self
-    }
-    
-    private func setFilms() {
-        let f1 = Films(id: 1, name: "Django", image: "django", price: 24)
-        let f2 = Films(id: 2, name: "Interstellar", image: "interstellar", price: 32)
-        let f3 = Films(id: 3, name: "Inception", image: "inception", price: 16)
-        let f4 = Films(id: 4, name: "The Hateful Eight", image: "thehatefuleight", price: 28)
-        let f5 = Films(id: 5, name: "The Pianist", image: "thepianist", price: 18)
-        let f6 = Films(id: 6, name: "Anadoluda", image: "anadoluda", price: 10)
-        filmsList.append(f1)
-        filmsList.append(f2)
-        filmsList.append(f3)
-        filmsList.append(f4)
-        filmsList.append(f5)
-        filmsList.append(f6)
     }
     
     private func setCollectionUI() {

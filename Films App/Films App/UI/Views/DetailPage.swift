@@ -24,7 +24,7 @@ class DetailPage: UIViewController {
         if let f = film {
             filmNameLabel.text = f.name
             filmImageView.image = UIImage(named: f.image!)
-            filmPriceLabel.text = "\(f.price!) ₺"
+            filmPriceLabel.text = "\(f.price!) $"
         }
     }
 }

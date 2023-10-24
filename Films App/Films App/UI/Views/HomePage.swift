@@ -57,7 +57,7 @@ extension HomePage: UICollectionViewDelegate, UICollectionViewDataSource {
         let cell = filmsCollectionView.dequeueReusableCell(withReuseIdentifier: "filmCell", for: indexPath) as! FilmCell
         
         cell.filmImageView.image = UIImage(named: film.image!)
-        cell.imagePriceLabel.text = "\(film.price!) ₺"
+        cell.imagePriceLabel.text = "\(film.price!) $"
         
         cell.layer.borderColor = UIColor.lightGray.cgColor
         cell.layer.borderWidth = 0.3

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DCBB17582AE746A1002D48D7 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBB174F2AE746A1002D48D7 /* FMResultSet.m */; };
+		DCBB17592AE746A1002D48D7 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBB17502AE746A1002D48D7 /* FMDatabaseAdditions.m */; };
+		DCBB175A2AE746A1002D48D7 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBB17512AE746A1002D48D7 /* FMDatabaseQueue.m */; };
+		DCBB175B2AE746A1002D48D7 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBB17522AE746A1002D48D7 /* FMDatabase.m */; };
+		DCBB175C2AE746A1002D48D7 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBB17572AE746A1002D48D7 /* FMDatabasePool.m */; };
+		DCBB175E2AE746B2002D48D7 /* film.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = DCBB175D2AE746B2002D48D7 /* film.sqlite */; };
 		DCBE2BA92ADDBC0000B65B02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBE2BA82ADDBC0000B65B02 /* AppDelegate.swift */; };
 		DCBE2BAB2ADDBC0000B65B02 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBE2BAA2ADDBC0000B65B02 /* SceneDelegate.swift */; };
 		DCBE2BAD2ADDBC0000B65B02 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBE2BAC2ADDBC0000B65B02 /* HomePage.swift */; };
@@ -26,6 +32,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DCBB174B2AE74691002D48D7 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		DCBB174C2AE746A1002D48D7 /* Films App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Films App-Bridging-Header.h"; sourceTree = "<group>"; };
+		DCBB174D2AE746A1002D48D7 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		DCBB174E2AE746A1002D48D7 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		DCBB174F2AE746A1002D48D7 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		DCBB17502AE746A1002D48D7 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		DCBB17512AE746A1002D48D7 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		DCBB17522AE746A1002D48D7 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		DCBB17532AE746A1002D48D7 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		DCBB17542AE746A1002D48D7 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		DCBB17552AE746A1002D48D7 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		DCBB17562AE746A1002D48D7 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		DCBB17572AE746A1002D48D7 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		DCBB175D2AE746B2002D48D7 /* film.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = film.sqlite; sourceTree = "<group>"; };
 		DCBE2BA52ADDBC0000B65B02 /* Films App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Films App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCBE2BA82ADDBC0000B65B02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCBE2BAA2ADDBC0000B65B02 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,11 +77,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DCBB174A2AE74691002D48D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DCBB174B2AE74691002D48D7 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DCBE2B9C2ADDBBFF00B65B02 = {
 			isa = PBXGroup;
 			children = (
 				DCBE2BA72ADDBC0000B65B02 /* Films App */,
 				DCBE2BA62ADDBC0000B65B02 /* Products */,
+				DCBB174A2AE74691002D48D7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,6 +113,19 @@
 				DCBE2BB12ADDBC0100B65B02 /* Assets.xcassets */,
 				DCBE2BB32ADDBC0100B65B02 /* LaunchScreen.storyboard */,
 				DCBE2BB62ADDBC0100B65B02 /* Info.plist */,
+				DCBB175D2AE746B2002D48D7 /* film.sqlite */,
+				DCBB174D2AE746A1002D48D7 /* FMDatabase.h */,
+				DCBB17522AE746A1002D48D7 /* FMDatabase.m */,
+				DCBB17532AE746A1002D48D7 /* FMDatabaseAdditions.h */,
+				DCBB17502AE746A1002D48D7 /* FMDatabaseAdditions.m */,
+				DCBB17542AE746A1002D48D7 /* FMDatabasePool.h */,
+				DCBB17572AE746A1002D48D7 /* FMDatabasePool.m */,
+				DCBB174E2AE746A1002D48D7 /* FMDatabaseQueue.h */,
+				DCBB17512AE746A1002D48D7 /* FMDatabaseQueue.m */,
+				DCBB17562AE746A1002D48D7 /* FMDB.h */,
+				DCBB17552AE746A1002D48D7 /* FMResultSet.h */,
+				DCBB174F2AE746A1002D48D7 /* FMResultSet.m */,
+				DCBB174C2AE746A1002D48D7 /* Films App-Bridging-Header.h */,
 			);
 			path = "Films App";
 			sourceTree = "<group>";
@@ -187,6 +229,7 @@
 				TargetAttributes = {
 					DCBE2BA42ADDBC0000B65B02 = {
 						CreatedOnToolsVersion = 15.0;
+						LastSwiftMigration = 1500;
 					};
 				};
 			};
@@ -219,6 +262,7 @@
 				DCBE2BB52ADDBC0100B65B02 /* LaunchScreen.storyboard in Resources */,
 				DCBE2BB22ADDBC0100B65B02 /* Assets.xcassets in Resources */,
 				DCBE2BB02ADDBC0000B65B02 /* Main.storyboard in Resources */,
+				DCBB175E2AE746B2002D48D7 /* film.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,12 +275,17 @@
 			files = (
 				DCBE2BAD2ADDBC0000B65B02 /* HomePage.swift in Sources */,
 				DCBE2BC32ADDBEBE00B65B02 /* Films.swift in Sources */,
+				DCBB175C2AE746A1002D48D7 /* FMDatabasePool.m in Sources */,
 				DCC5AB382ADF20DE00977E5C /* FilmsDaoRepository.swift in Sources */,
+				DCBB175B2AE746A1002D48D7 /* FMDatabase.m in Sources */,
 				DCBE2BA92ADDBC0000B65B02 /* AppDelegate.swift in Sources */,
 				DCC5AB3B2ADF219900977E5C /* HomePageViewModel.swift in Sources */,
 				DCBE2BC72ADDBFEE00B65B02 /* FilmCell.swift in Sources */,
+				DCBB17582AE746A1002D48D7 /* FMResultSet.m in Sources */,
 				DCBE2BC52ADDBF1400B65B02 /* DetailPage.swift in Sources */,
+				DCBB175A2AE746A1002D48D7 /* FMDatabaseQueue.m in Sources */,
 				DCBE2BAB2ADDBC0000B65B02 /* SceneDelegate.swift in Sources */,
+				DCBB17592AE746A1002D48D7 /* FMDatabaseAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +435,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3755NX4L2K;
@@ -404,6 +454,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ahmeterkut.Films-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Films App/Films App-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -414,6 +466,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3755NX4L2K;
@@ -432,6 +485,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ahmeterkut.Films-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Films App/Films App-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

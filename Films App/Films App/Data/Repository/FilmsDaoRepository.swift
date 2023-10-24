@@ -12,20 +12,35 @@ class FilmsDaoRepository {
     
     var filmsList = BehaviorSubject<[Films]>(value: [Films]())
     
+    let db: FMDatabase?
+    init() {
+        let targetPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+        let databaseURL = URL(fileURLWithPath: targetPath).appendingPathComponent("film.sqlite")
+        
+        db = FMDatabase.init(path: databaseURL.path())
+    }
+    
     func filmsReload() {
+        db?.open()
         var list = [Films]()
-        let f1 = Films(id: 1, name: "Django", image: "django", price: 24)
-        let f2 = Films(id: 2, name: "Interstellar", image: "interstellar", price: 32)
-        let f3 = Films(id: 3, name: "Inception", image: "inception", price: 16)
-        let f4 = Films(id: 4, name: "The Hateful Eight", image: "thehatefuleight", price: 28)
-        let f5 = Films(id: 5, name: "The Pianist", image: "thepianist", price: 18)
-        let f6 = Films(id: 6, name: "Anadoluda", image: "anadoluda", price: 10)
-        list.append(f1)
-        list.append(f2)
-        list.append(f3)
-        list.append(f4)
-        list.append(f5)
-        list.append(f6)
-        filmsList.onNext(list)
+        
+        do {
+            let rs = try db!.executeQuery("SELECT * FROM films", values: nil)
+            
+            while rs.next() {
+                let film = Films(id: Int(rs.string(forColumn: "id"))!,
+                                 name: rs.string(forColumn: "name")!,
+                                 image: rs.string(forColumn: "image")!,
+                                 price: Int(rs.string(forColumn: "price"))!)
+                
+                list.append(film)
+            }
+            
+            filmsList.onNext(list)
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+        db?.close()
     }
 }
